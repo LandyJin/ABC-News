@@ -1,0 +1,33 @@
+.container {
+    margin-top: 20px
+}
+
+.card {
+    border: none !important;
+}
+
+.card-title {
+    color: rgb(0, 0, 139);
+    font-size: large;
+    font-weight: 500;
+}
+
+.card-title:hover {
+    text-decoration: underline;
+}
+
+.featureCard {
+    background-color: rgb(240, 240, 240);
+}
+
+.text-muted:last-child {
+    float: right !important;
+}
+
+.list-group-flush .list-group-item {
+    color: rgb(56, 56, 56)
+}
+
+.list-group-flush .list-group-item:hover {
+    text-decoration: none;
+}

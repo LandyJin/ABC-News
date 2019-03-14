@@ -1,0 +1,9 @@
+.search .container {
+    margin-top: 50px
+}
+
+@media (min-width: 992px) {
+    .search .container {
+        width: 60% !important;
+    }
+}

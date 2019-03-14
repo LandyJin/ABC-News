@@ -1,0 +1,21 @@
+.menu {
+    text-transform: uppercase
+}
+
+li:not(:last-child) {
+    padding-right: 20px
+}
+
+li:last-child > a {
+    color: white;
+    font-weight: 900
+}
+
+li > a {
+    color: rgb(212, 212, 212)
+}
+
+li > a:hover {
+    text-decoration: none;
+    color: white
+}

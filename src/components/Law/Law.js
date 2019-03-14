@@ -8,7 +8,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 // Components
-import Loading from '../Loading/Loading';
+import Loading from '../Helpers/Loading';
 import LawList from './LawList';
 
 import { 

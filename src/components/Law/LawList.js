@@ -13,8 +13,8 @@ import {
     CardText, 
     CardImg  } from 'reactstrap';
 
-// Moment
-import moment from 'moment';
+// Helper
+import TagReplace from '../Helpers/TagReplace';
 
 export class LawList extends Component {
   render() {
@@ -37,9 +37,9 @@ export class LawList extends Component {
                     }
                     <CardBody className={className}>
                     <CardTitle>{law.title}</CardTitle>
-                    <CardText className="description">{law.description.replace(/<p>/g, "").replace(/<\/p>/g,"")}</CardText>
+                    <CardText className="description">{TagReplace.htmlDecode(law.description)}</CardText>
                     <CardText>
-                        <small className="text-muted">{moment(law.pubDate).format('L, LT')}</small>
+                        <small className="text-muted">{TagReplace.dateFormate(law.pubDate)}</small>
                         <small className="text-muted">Author: {law.author}</small>
                     </CardText>
                     </CardBody>

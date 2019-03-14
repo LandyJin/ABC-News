@@ -3,10 +3,9 @@ import React, { Component } from 'react';
 // CSS
 import '../../styles/search.css';
 
-// Components
-import Loading from '../Loading/Loading';
-
-import moment from 'moment';
+// Helpers
+import Loading from '../Helpers/Loading';
+import TagReplace from '../Helpers/TagReplace';
 
 import { 
     Container, 
@@ -47,7 +46,7 @@ export class Search extends Component {
                 return item.title.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
                        item.description.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
                        item.author.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
-                       moment(item.pubDate).format('L, LT').toLowerCase().indexOf(search.toLowerCase()) !== -1 
+                       TagReplace.dateFormate(item.pubDate).toLowerCase().indexOf(search.toLowerCase()) !== -1 
             }
         )
 
@@ -72,9 +71,9 @@ export class Search extends Component {
                         <Card>
                             <CardBody>
                                 <CardTitle>{item.title}</CardTitle>
-                                <CardText className="description">{item.description.replace(/<p>/g, "").replace(/<\/p>/g,"")}</CardText>
+                                <CardText className="description">{TagReplace.htmlDecode(item.description)}</CardText>
                                 <CardText>
-                                    <small className="text-muted">{moment(item.pubDate).format('L, LT')}</small>
+                                    <small className="text-muted">{TagReplace.dateFormate(item.pubDate)}</small>
                                     <small className="text-muted">Author: {item.author}</small>
                                 </CardText>
                             </CardBody>

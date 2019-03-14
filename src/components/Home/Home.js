@@ -13,7 +13,7 @@ import {
     Col } from 'reactstrap';
 
 // Components
-import Loading from '../Loading/Loading';
+import Loading from '../Helpers/Loading';
 import HomeList from './HomeList'
 
 export class Home extends Component {

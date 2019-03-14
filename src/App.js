@@ -10,7 +10,7 @@ import Header from './components/Header/Header'
 import Menu from './components/Menu/Menu';
 
 // Components
-import Loading from './components/Loading/Loading';
+import Loading from './components/Helpers/Loading';
 import Sport from './components/Sport/Sport';
 import Law from './components/Law/Law';
 import Business from'./components/Business/Business';

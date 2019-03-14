@@ -1,8 +1,8 @@
 # ABC News App
 
-## Check My Website
+## Check Website
 
-https://landyjin.herokuapp.com/
+https://safe-river-85709.herokuapp.com/
 
 ## Quick start
 

@@ -65,7 +65,11 @@ export class Search extends Component {
                 :
                 <ListGroup flush>
                     {itemsList
-                        .sort((a,b) => {return new Date(b.date) - new Date(a.date)})
+                        // Sort based on Date in Alphabetical Order
+                        .sort((a, b) => {
+                            let compareDate = b.pubDate.localeCompare(a.pubDate);
+                            return compareDate === 0 ? a.title.localeCompare(b.title) : compareDate
+                        })
                         .map((item, i) => (
                     <ListGroupItem key={i}>
                         <Card>

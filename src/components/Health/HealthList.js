@@ -26,7 +26,11 @@ export class HealthList extends Component {
       <div>
         <ListGroup flush>
                 {healths
-                .sort((a,b) => {return new Date(b.date) - new Date(a.date)})
+                // Sort based on Date in Alphabetical Order
+                .sort((a, b) => {
+                    let compareDate = b.pubDate.localeCompare(a.pubDate);
+                    return compareDate === 0 ? a.title.localeCompare(b.title) : compareDate
+                })
                 .map((health, i) => (
                 <ListGroupItem tag="a" href={health.link} key={i}>
                     <Card data-aos="fade-up" data-aos-duration="1000">

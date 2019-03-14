@@ -12,9 +12,21 @@ https://safe-river-85709.herokuapp.com/
 yarn install
 ```
 
+OR
+
+```bash
+npm i
+```
+
 ### Run the App in Localhost: 
 ```bash
 yarn start
+```
+
+OR
+
+```bash
+npm run start
 ```
 
 

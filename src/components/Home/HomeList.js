@@ -35,7 +35,7 @@ export class HomeList extends Component {
                 }
                 <CardBody className={className}>
                     <CardTitle>{item.title}</CardTitle>
-                    <CardText className="description">{item.description}</CardText>
+                    <CardText className="description">{item.description.replace(/<p>/g, "").replace(/<\/p>/g,"")}</CardText>
                     <CardText>
                         <small className="text-muted">{moment(item.pubDate).format('L, LT')}</small>
                         <small className="text-muted">Author: {item.author}</small>

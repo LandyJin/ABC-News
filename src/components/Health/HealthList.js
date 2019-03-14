@@ -37,7 +37,7 @@ export class HealthList extends Component {
                         }
                         <CardBody className={className}>
                         <CardTitle>{health.title}</CardTitle>
-                        <CardText className="description">{health.description}</CardText>
+                        <CardText className="description">{health.description.replace(/<p>/g, "").replace(/<\/p>/g,"")}</CardText>
                         <CardText>
                             <small className="text-muted">{moment(health.pubDate).format('L, LT')}</small>
                             <small className="text-muted">Author: {health.author}</small>

@@ -41,19 +41,19 @@ export class Menu extends Component {
             <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                     <NavItem>
-                        <NavLink to="/law">Law</NavLink>
+                        <NavLink to="/law" activeClassName="activeLink">Law</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to="/business">Business</NavLink>
+                        <NavLink to="/business" activeClassName="activeLink">Business</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to='/health'>Health</NavLink>
+                        <NavLink to='/health' activeClassName="activeLink">Health</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to='/sport'>Sport</NavLink>
+                        <NavLink to='/sport' activeClassName="activeLink">Sport</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to='/search'>Search</NavLink>
+                        <NavLink to='/search' activeClassName="activeLink">Search</NavLink>
                     </NavItem>
                 </Nav>
             </Collapse>

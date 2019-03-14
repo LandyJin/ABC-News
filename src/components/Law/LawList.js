@@ -37,7 +37,7 @@ export class LawList extends Component {
                     }
                     <CardBody className={className}>
                     <CardTitle>{law.title}</CardTitle>
-                    <CardText className="description">{law.description}</CardText>
+                    <CardText className="description">{law.description.replace(/<p>/g, "").replace(/<\/p>/g,"")}</CardText>
                     <CardText>
                         <small className="text-muted">{moment(law.pubDate).format('L, LT')}</small>
                         <small className="text-muted">Author: {law.author}</small>

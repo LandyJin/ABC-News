@@ -36,7 +36,7 @@ export class SportList extends Component {
                     }
                     <CardBody className={className}>
                     <CardTitle>{sport.title}</CardTitle>
-                    <CardText className="description">{sport.description}</CardText>
+                    <CardText className="description">{sport.description.replace(/<p>/g, "").replace(/<\/p>/g,"")}</CardText>
                     <CardText>
                         <small className="text-muted">{moment(sport.pubDate).format('L, LT')}</small>
                         <small className="text-muted">Author: {sport.author}</small>

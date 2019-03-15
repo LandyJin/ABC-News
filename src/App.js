@@ -25,7 +25,7 @@ import * as actionCreators from './Actions/RootAction';
 class App extends Component {
   // Redux Dispatch
   componentDidMount() {
-    this.props.loadItem()   
+    this.props.loadItem()
   }
 
   render() {
@@ -34,9 +34,9 @@ class App extends Component {
       isLoading,
       items
     } = this.props;
-    
     return (
       <div className="App">
+      {}
       {isLoading ? 
         <Loading/>
       :

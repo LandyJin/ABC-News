@@ -17,12 +17,10 @@ import TagReplace from '../Helpers/TagReplace';
 
 export class HomeList extends Component {
   render() {
-    const {
-        items,
-        className
-    } = this.props;
+    const { className, items } = this.props;
     return (
     <ListGroup flush>
+    
         {items
         // Sort based on Date in Alphabetical Order
         .sort((a, b) => {

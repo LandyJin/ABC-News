@@ -72,7 +72,7 @@ export class Home extends Component {
             :
             <InfiniteScroll
                 dataLength={items.length}
-                next={this.fetchMoreData.bind(this, (this.state.items.length)/3 + 1)}
+                next={this.fetchMoreData.bind(this, (items.length)/3 + 1)}
                 hasMore={hasMore}
                 loader={<Loading/>}
                 endMessage={
